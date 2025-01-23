@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center h-screen justify-between px-4">
+    <div className=" flex flex-col items-center h-screen justify-between px-4">
       {/* Logo Section */}
       <div className="flex justify-center mt-20"> 
         <img
