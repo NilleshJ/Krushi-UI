@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button"; 
-import { Input } from "@/components/ui/input";   
+   
 
 export default function SignUp() {
   return (
@@ -13,7 +13,7 @@ export default function SignUp() {
         <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
           {/* Placeholder for User Icon */}
           <img
-            src="profile.png" 
+            src="/profile.png" 
             alt="User Icon"
             className="w-full h-full rounded-full"
           />
@@ -37,7 +37,7 @@ export default function SignUp() {
         {/* Monitor Icon */}
         <div className="flex flex-col items-center">
           <img
-            src="monitor1.png" 
+            src="/monitor1.png" 
             alt="Monitor Icon"
             className="w-6 h-6"
           />
@@ -47,7 +47,7 @@ export default function SignUp() {
         {/* Sign Up Icon */}
         <div className="flex flex-col items-center">
           <img
-            src="signupp.png" 
+            src="/signupp.png" 
             alt="Sign Up Icon"
             className="w-6 h-6"
           />

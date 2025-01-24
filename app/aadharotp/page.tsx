@@ -2,11 +2,12 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image"; // Updated to use the Next.js <Image /> component
 
 export default function SignUp() {
-  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [otp, setOtp] = useState<string[]>(["", "", "", "", "", ""]);
 
-  const handleOtpChange = (value, index) => {
+  const handleOtpChange = (value: string, index: number) => {
     const updatedOtp = [...otp];
     updatedOtp[index] = value;
     setOtp(updatedOtp);
@@ -18,7 +19,7 @@ export default function SignUp() {
     }
   };
 
-  const handleKeyDown = (event, index) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>, index: number) => {
     // Move focus to the previous box on backspace
     if (event.key === "Backspace" && !otp[index] && index > 0) {
       const prevInput = document.getElementById(`otp-input-${index - 1}`);
@@ -32,10 +33,12 @@ export default function SignUp() {
       <div className="flex items-center justify-between w-full max-w-xs mt-6">
         <div className="text-3xl w-32 h-9 font-bold mt-10">Sign Up</div>
         <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
-          <img
-            src="profile.png"
+          <Image
+            src="/profile.png"
             alt="User Icon"
-            className="w-full h-full rounded-full"
+            className="rounded-full"
+            width={64}
+            height={64} // Recommended usage for <Image />
           />
         </div>
       </div>
@@ -54,7 +57,7 @@ export default function SignUp() {
               id={`otp-input-${index}`}
               type="text"
               value={digit}
-              maxLength="1"
+              maxLength={1}
               className="w-10 h-10 border border-gray-300 text-center text-lg rounded bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               onChange={(e) => handleOtpChange(e.target.value, index)}
               onKeyDown={(e) => handleKeyDown(e, index)}
@@ -72,19 +75,11 @@ export default function SignUp() {
       {/* Footer Navigation */}
       <div className="flex justify-between w-full max-w-xs mt-auto mb-4">
         <div className="flex flex-col items-center">
-          <img
-            src="monitor1.png"
-            alt="Monitor Icon"
-            className="w-6 h-6"
-          />
+          <Image src="/monitor1.png" alt="Monitor Icon" width={24} height={24} />
           <div className="text-sm text-gray-500">Monitor</div>
         </div>
         <div className="flex flex-col items-center">
-          <img
-            src="signupp.png"
-            alt="Sign Up Icon"
-            className="w-6 h-6"
-          />
+          <Image src="/signupp.png" alt="Sign Up Icon" width={24} height={24} />
           <div className="text-sm text-blue-500">SignUp</div>
         </div>
       </div>
