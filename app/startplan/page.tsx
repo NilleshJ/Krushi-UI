@@ -48,7 +48,7 @@ export default function SubscriptionPage() {
         {/* Plan Title */}
         <div className="mt-16">
           <p className="text-left text-black font-semibold text-lg">
-            Starter Plan
+          Starter Plan
           </p>
         </div>
 
