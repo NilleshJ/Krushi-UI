@@ -12,11 +12,12 @@ export default function SignUp() {
       <div className="flex items-center justify-between w-full max-w-xs mt-6">
         <div className="text-3xl w-32 h-9 font-bold mt-10">Sign Up</div>
         <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
-          {/* Placeholder for User Icon */}
           <Image
-            src="/profile.png" 
+            src="/profile.png"
             alt="User Icon"
-            className="w-full h-full rounded-full"
+            className="rounded-full"
+            width={64}
+            height={64} // Recommended usage for <Image />
           />
         </div>
       </div>
