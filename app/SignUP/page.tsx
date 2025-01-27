@@ -2,13 +2,13 @@
 import React from "react";
 import { Button } from "@/components/ui/button"; 
 import { Input } from "@/components/ui/input";   
-
+import Image from "next/image"; 
 export default function Home() {
   return (
     <div className=" flex flex-col items-center h-screen justify-between px-4">
       {/* Logo Section */}
       <div className="flex justify-center mt-20"> 
-        <img
+        <Image
           src="accm.png" 
           alt="Logo"
           width={116}
