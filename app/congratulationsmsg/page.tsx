@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-
+import Image from "next/image"; 
 export default function SignUp() {
   return (
     <div className="flex flex-col items-center h-screen justify-between px-4">
@@ -10,7 +10,7 @@ export default function SignUp() {
       <div className="flex items-center justify-between w-full max-w-xs mt-6">
         <div className="text-3xl font-bold mt-10">Sign Up</div>
         <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
-          <img
+          <Image
             src="profile.png"
             alt="User Icon"
             className="w-full h-full rounded-full"

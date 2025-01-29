@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-   
+import Image from "next/image";    
 
 export default function SignUp() {
   return (
@@ -11,7 +11,7 @@ export default function SignUp() {
         <div className="text-3xl w-32 h-9 font-bold mt-10">Monitor</div>
         <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
           {/* Placeholder for User Icon */}
-          <img
+          <Image
             src="/profile.png" 
             alt="User Icon"
             className="w-full h-full rounded-full"
