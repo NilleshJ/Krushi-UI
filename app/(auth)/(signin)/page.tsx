@@ -64,7 +64,6 @@ export default function SignUp() {
       <div className="text-center text-gray-600">
         To create a new store, complete your KYC by validating your Aadhaar number
       </div>
-
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
